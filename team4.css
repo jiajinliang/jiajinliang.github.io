@@ -1,0 +1,109 @@
+html, body {
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    font-family: 'PT Serif', serif;
+    background-color: #DCDCDC;
+}
+.header{
+    color: black;
+    margin: 0 auto;
+}
+
+#logo{
+    margin: 0 auto;
+    display: block;
+}
+#main {
+    text-align: center;
+}
+div .team, div .engineer {
+    display: inline-block;
+}
+div .team {
+    margin: 0 20px 0 20px;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.contact-info{
+    font-size: 12px;
+}
+.initial {
+    opacity: 0;
+}
+.team {
+    animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    /* Firefox */
+    -webkit-animation: fadeIn 1s;
+    /* Safari and Chrome */
+    -o-animation: fadeIn 1s;
+}
+
+.avatar {
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.avatar:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }  
+    to {
+        opacity: 1;
+    }
+}
+#team-lead{
+    animation-delay: 0.5s;
+}
+
+#team-coder{
+    animation-delay: 1s;
+}
+#team-qa{
+    animation-delay: 1.5s;
+}
+#team-util{
+    animation-delay: 2s;
+}
+#team-devops{
+    animation-delay: 2.5s;
+}
+
+.engineer {
+    position: relative;
+}
+
+.more {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.engineer:hover .avatar {
+    opacity: 0.3;
+}
+
+.engineer:hover .more {
+    opacity: 1;
+}
+
+h2{
+    font-size: 32px;
+    /* background: -webkit-linear-gradient(rgb(155, 155, 155), #333); */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
